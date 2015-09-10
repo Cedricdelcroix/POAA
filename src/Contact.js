@@ -6,6 +6,8 @@ Contact = (function (self) {
         var firstName;
         var lastName;
         var gender;
+        var mails = [];
+        var phones = [];
 
         this.gender = function () {
             return gender ;
@@ -16,7 +18,12 @@ Contact = (function (self) {
         this.lastName = function () {
             return lastName ;
         };
-
+        this.mails = function() {
+            return mails;
+        }
+            this.phones = function() {
+                return phones;
+            }
         this.setGender = function (gender) {
             this.gender = gender ;
         };
@@ -26,8 +33,12 @@ Contact = (function (self) {
         this.setLastName = function (lastName) {
             this.lastName = lastName;
         };
-
-
+        this.addMail = function(mailAdress) {
+            mails.push(mailAdress);
+        }
+        this.addPhone = function(number){
+            phones.push(number);
+        }
 
         var process = function ()
         { };
